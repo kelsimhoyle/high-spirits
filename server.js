@@ -29,11 +29,12 @@ if (process.env.NODE_ENV === "production") {
 
 app.use(routes);
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/high-spirits", { useNewUrlParser: true }, function(err) {
-    if (err) throw err;
-    console.log(`mongoose connection successful`.yellow);
+
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/highspirits", { useNewUrlParser: true }).then(
+    () => { console.log("connected")
     app.listen(PORT, (err)=> {
-        if (err) throw err;
-        console.log(`connected on port ${PORT}`.cyan)
-    });
-});
+                if (err) throw err;
+                console.log(`connected on port ${PORT}`)
+            });},
+    err => { console.log(err)}
+  );
