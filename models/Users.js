@@ -2,6 +2,7 @@ const mongoose = require("mongoose"); mongoose.set('useCreateIndex', true);
 const bcrypt = require('bcrypt');
 const Schema = mongoose.Schema;
 
+
 const usersSchema = new Schema({
   username: {
     type: String,
@@ -26,7 +27,13 @@ const usersSchema = new Schema({
   createdAt: {
     type: Date,
     default: Date.now()
-  }
+  },
+  favorites: { 
+    type : Schema.ObjectId, 
+    ref: "Distillery" },
+  saved: { 
+    type : Schema.ObjectId, 
+    ref: "Distillery" }
 });
 
 usersSchema.methods.generateHash = function (password) {

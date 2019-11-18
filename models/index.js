@@ -1,3 +1,4 @@
 module.exports = {
-    User: require("../models/Users")
+    User: require("./Users"),
+    Distillery: require("./Distillery")
   };

@@ -1,14 +1,17 @@
 import React, { useContext } from "react";
 import UserProvider from "../../contexts/UserProvider";
+import Login from "../Login";
 
 
 const Dashboard = () => {
     const {loggedIn, user} = useContext(UserProvider.context);
-    if (user) console.log(user)
-    console.log(loggedIn)
-return (
-    
-    <main className="dashboard-page">
+    return (
+
+  <>
+
+    { loggedIn ?   (
+        
+        <main className="dashboard-page">
         <div className="greeting">
             <h2 className="center-align">Cheers, {user.name}</h2>
         </div>
@@ -21,8 +24,14 @@ return (
             </div>
         </div>
     </main>
+    
+        ) : (
+            <Login />
+        )
+    }
+</>
+    )
 
-)
 }
 
 export default Dashboard;
