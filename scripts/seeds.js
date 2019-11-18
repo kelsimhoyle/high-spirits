@@ -3,33 +3,37 @@ const db = require("../models");
 
 
 mongoose.connect("mongodb://localhost/highspirits", { useNewUrlParser: true }).then(
-    () => { 
+    () => {
         console.log("connected")
-       
-  },
-    err => { console.log(err)}
-  );
+
+    },
+    err => { console.log(err) }
+);
 
 
 
-const userSeed = [
+const distillerySeed = [
     {
-        username: "kelsi",
-        password: "Password1234!",
-        name: "kelsi",
+        distillery: "10TH MOUNTAIN WHISKEY & SPIRIT COMPANY",
+        wesbite: "http://10thwhiskey.com",
+        city: "Vail"
+    },
+    {
+        distillery: "1350 DISTILLING",
+        website: "http://1350distilling.com",
+        city: "Colorado Springs"
     }
-    ]
-    
+]
 
-    db.User
-.remove({})
-.then(() => db.User.collection.insertMany(userSeed))
-.then(data => {
-    console.log(data.result.n = " records inserted!");
-    process.exit(0);
-})
-.catch(err => {
-    console.err(err);
-    process.exit(1)
-});
- 
+
+db.Distillery
+    .remove({})
+    .then(() => db.Distillery.collection.insertMany(distillerySeed))
+    .then(data => {
+        console.log(data.result.n = " records inserted!");
+        process.exit(0);
+    })
+    .catch(err => {
+        console.err(err);
+        process.exit(1)
+    });
