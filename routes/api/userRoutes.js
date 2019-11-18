@@ -19,6 +19,7 @@ router.post("/login", passport.authenticate("local", {
 // /api/users/signup
 // route to logout the user
 router.post("/signup", function(req, res, next) {
+  console.log("signing up")
   db.User.findOne({username: req.body.username}, function(err, user) {
     if (err) throw err;
     if (user) {
@@ -27,9 +28,9 @@ router.post("/signup", function(req, res, next) {
     }
     if (!user) {
       let newUser = new db.User({
+        name: req.body.name,
         username: req.body.username,
-        password: req.body.password,
-        name: req.body.name
+        password: req.body.password
       })
       newUser.password = newUser.generateHash(req.body.password);
       newUser.save(function(err) {

@@ -1,3 +1,3 @@
 module.exports = {
-    User: require("../../code/kango-pak/models/Users")
+    User: require("../models/Users")
   };

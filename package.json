@@ -9,7 +9,7 @@
     "start:dev": "concurrently \"npm run client\" \"npm run server\"",
     "server": "nodemon server.js",
     "client": "cd client && npm run start",
-    "seed": "node scripts/seedDB.js && scripts/seed2DB.js",
+    "seed": "node scripts/seeds.js",
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
     "heroku-postbuild": "npm run build"
@@ -22,13 +22,17 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.19.0",
     "bcrypt": "^3.0.6",
     "connect-flash": "^0.1.1",
     "express": "^4.17.1",
     "express-session": "^1.17.0",
+    "if-env": "^1.0.4",
+    "lodash": "^4.17.15",
     "mongoose": "^5.7.10",
     "morgan": "^1.9.1",
     "passport": "^0.4.0",
-    "passport-local": "^1.0.0"
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7"
   }
 }

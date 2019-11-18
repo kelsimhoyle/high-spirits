@@ -4,22 +4,25 @@ import Home from "./pages/Home";
 import Header from "./components/Header";
 import Dashboard from "./pages/Dashboard";
 import UserProvider from "./contexts/UserProvider";
-
+import Login from "./pages/Login";
+import Register from "./pages/Register"
 
 function App() {
   return (
   
       <Router>
-        {/* <UserProvider> */}
+        <UserProvider>
           <Header />
         
             <Switch>
               <Route exact path="/" component={Home} />
-              <Router exact path="/dashboard" component={Dashboard} />
+              <Route exact path="/dashboard" component={Dashboard} />
+              <Route exact path="/users/login" component={Login} />
+              <Route exact path="/users/register" component={Register} />
               {/* <Route component={NoMatch} /> */}
             </Switch>
  
-          {/* </UserProvider> */}
+          </UserProvider>
       </Router>
   );
 }

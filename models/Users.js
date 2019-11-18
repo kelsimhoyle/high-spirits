@@ -6,7 +6,7 @@ const usersSchema = new Schema({
   username: {
     type: String,
     unique: true,
-    required: [true, "username is required"]
+    required: [true, "email is required"]
   },
   password: {
     type: String,
@@ -26,11 +26,7 @@ const usersSchema = new Schema({
   createdAt: {
     type: Date,
     default: Date.now()
-  },
-  trips: [{
-    type: Schema.Types.ObjectId,
-    ref: 'Trips'
-  }]
+  }
 });
 
 usersSchema.methods.generateHash = function (password) {
