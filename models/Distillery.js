@@ -13,7 +13,11 @@ const distillerySchema = new Schema({
     city: {
         type: String,
         required: false
-    }
+    },
+    alcohols: [{ 
+        type: Schema.ObjectId, 
+        ref: "Alcohol" 
+      }]
 });
 
 const Distillery = mongoose.model("Distillery", distillerySchema);
