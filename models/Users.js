@@ -28,14 +28,18 @@ const usersSchema = new Schema({
     type: Date,
     default: Date.now()
   },
-  favorites: { 
-    type : mongoose.Schema.Types.ObjectId, 
+  favorites: [{ 
+    type : Schema.ObjectId, 
     ref: "Distillery" 
-  },
-  saved: { 
-    type : mongoose.Schema.Types.ObjectId, 
+  }],
+  saved: [{ 
+    type : Schema.ObjectId, 
     ref: "Distillery"
-   }
+   }],
+   ratings: [{
+     type: Schema.ObjectId,
+     ref: "Rating"
+   }]
 });
 
 usersSchema.methods.generateHash = function (password) {

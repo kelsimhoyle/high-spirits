@@ -18,10 +18,10 @@ const alcoholSchema = new Schema({
         type: String,
         required: true
     },
-    ratings: { 
-    type : mongoose.Schema.Types.ObjectId, 
-    ref: "Rating" 
-  },
+    ratings: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Rating"
+    }]
 });
 
 const Alcohol = mongoose.model("Alcohol", alcoholSchema);
