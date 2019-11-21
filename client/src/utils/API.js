@@ -26,4 +26,36 @@ export default {
     return axios.get("/api/users/logout")
   },
 
+  getFlavor: function(flavor) {
+    return axios.get(`/api/alcohol/flavor/${flavor}`)
+  },
+
+  getType: function(type) {
+    return axios.get(`/api/alcohol/types/${type}`)
+  },
+
+  getRating: function(alcoholId) {
+    return axios.get(`/api/alcohol/ratings/${alcoholId}`)
+  },
+
+  postRating: function(ratingInfo) {
+    return axios.post(`/api/alcohol/rate/${ratiningInfo.alcoholId}`, ratingInfo)
+  },
+
+  updateRating: function(ratingInfo) {
+    return axios.put(`/api/alcohol/ratings/${ratingInfo._id}`, ratingInfo)
+  },
+
+  removeRating: function(ratingId) {
+    return axios.delete(`/api/alcohol/ratings/${ratingId}`)
+  },
+
+  findByLocation: function(location) {
+    return router.get(`/api/distillery/${location}`)
+  },
+
+  getDistillery: function(distilleryId) {
+    return router.get(`/api/distiller/${distilleryId}`)
+  }
+
 };
