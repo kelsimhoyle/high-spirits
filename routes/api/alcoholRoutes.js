@@ -48,7 +48,10 @@ router.post("/rate/:AlcoholId", authMiddleware.isLoggedIn, (req, res) => {
 });
 
 router.put("/ratings/:ratingId", authMiddleware.isLoggedIn, (req, res) => {
-  db.Ratings.findByIdAndUpdate({ _id: req.params.ratingId }, { rating: req.body.rating, comment: req.body.comment })
+  db.Ratings.findByIdAndUpdate(
+    { _id: req.params.ratingId },
+    { rating: req.body.rating, comment: req.body.comment },
+    { new: true })
     .then(data => res.json(data))
     .catch(err => res.json(err))
 });
@@ -56,11 +59,11 @@ router.put("/ratings/:ratingId", authMiddleware.isLoggedIn, (req, res) => {
 router.delete("/ratings/:ratingId", authMiddleware.isLoggedIn, (req, res) => {
   db.Ratings.findByIdAndDelete({ _id: req.params.ratingId })
     .then(data => {
-      db.Alcohol.findByIdAndUpdate({ _id: data._id }, {$pull: { ratings: data._id }})
+      db.Alcohol.findByIdAndUpdate({ _id: data._id }, { $pull: { ratings: data._id } })
         .then(() => res.json("Rating successfully removed"))
         .catch(err => res.json(err))
     })
-    .catch(err =>  console.log(err))
+    .catch(err => console.log(err))
 });
 
 module.exports = router;
