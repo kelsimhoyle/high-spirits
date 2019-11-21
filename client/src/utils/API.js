@@ -55,7 +55,7 @@ export default {
   },
 
   getDistillery: function(distilleryId) {
-    return router.get(`/api/distiller/${distilleryId}`)
+    return router.get(`/api/distillery/${distilleryId}`)
   }
 
 };
