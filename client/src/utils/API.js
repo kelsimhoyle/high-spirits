@@ -39,7 +39,7 @@ export default {
   },
 
   postRating: function(ratingInfo) {
-    return axios.post(`/api/alcohol/rate/${ratiningInfo.alcoholId}`, ratingInfo)
+    return axios.post(`/api/alcohol/rate/${ratingInfo.alcoholId}`, ratingInfo)
   },
 
   updateRating: function(ratingInfo) {
@@ -51,11 +51,11 @@ export default {
   },
 
   findByLocation: function(location) {
-    return router.get(`/api/distillery/${location}`)
+    return axios.get(`/api/distillery/${location}`)
   },
 
   getDistillery: function(distilleryId) {
-    return router.get(`/api/distillery/${distilleryId}`)
+    return axios.get(`/api/distillery/${distilleryId}`)
   }
 
 };
