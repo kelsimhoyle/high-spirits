@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useForm } from "../../useForm";
+import { TextInput, Button, Icon } from "react-materialize";
 import API from "../../utils/API";
 
 const Login = () => {
@@ -36,48 +37,50 @@ const Login = () => {
 
                                 <div className="row">
                                     <div className="col s12">
-                                        { message ? (
-                                            <p>{message}</p> 
+                                        {message ? (
+                                            <p>{message}</p>
                                         ) :
-                                        null }
+                                            null}
                                     </div>
                                     <form className="container">
                                         <div className="row">
-                                            <div className="input-field col s12">
-                                                <input 
-                                                id="email" 
-                                                type="email" 
-                                                name="email" 
-                                                className="validate"
+                                            <TextInput
+                                                email
+                                                label="Email"
+                                                error="Incorrect Email"
+                                                validate
+                                                name="email"
+                                                s="12"
                                                 value={values.email}
                                                 onChange={handleChange}
-                                                 />
-                                                <label for="email">Email</label>
-                                            </div>
+                                            />
                                         </div>
                                         <div className="row">
-                                            <div className="input-field col s12">
-                                                <input 
-                                                id="password" 
-                                                type="password" 
-                                                name="password" 
-                                                className="validate"
+
+                                            <TextInput
+                                                label="Password"
+                                                password
+                                                name="password"
                                                 value={values.password}
                                                 onChange={handleChange}
-                                                 />
-                                                <label for="password">Password</label>
-                                            </div>
+                                                s="12"
+                                            />
+
+
                                         </div>
-                                        <button
-                                            className="btn waves-effect waves-light"
-                                            type="login"
-                                            id="login"
-                                            name="login"
+
+                                        <Button
+                                            node="button"
+                                            type="submit"
+                                            waves="light"
                                             onClick={e => handleLogin(e)}
-                                            >
+                                        >
                                             Submit
-                                        <i className="material-icons right">send</i>
-                                        </button>
+                                            <Icon right>
+                                                send
+                                            </Icon>
+                                        </Button>
+
                                     </form>
                                     <p className="center-align register-button">Don't have an account? <a
                                         href="/users/register">Register</a></p>
