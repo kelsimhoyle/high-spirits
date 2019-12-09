@@ -1,0 +1,219 @@
+[
+    {
+        "id": 1,
+        "name": "Denver", 
+        "latitude": "39.739235", 
+        "longitude": "-104.990250"
+    },
+    {
+        "id": 2,
+        "name": "Colorado Springs", 
+        "latitude": "38.835220", 
+        "longitude": "-104.819801"
+    },
+    {
+        "id": 3,
+        "name": "Monument", 
+        "latitude": "38.835220", 
+        "longitude": "-104.868240"
+    },
+    {
+        "id": 4,
+        "name": "Littleton",
+        "latitude": "39.613319", 
+        "longitude": "-105.016647"
+    },
+    {
+        "id": 5,
+        "name": "Loveland", 
+        "latitude": "40.394390", 
+        "longitude": "-105.07058"
+    },
+    {
+        "id": 6,
+        "name": "Green Mountain Falls", 
+        "latitude": "38.935330", 
+        "longitude": "-105.016860"
+    },
+    {
+        "id": 7,
+        "name": "Idaho Springs", 
+        "latitude": "39.742481", 
+        "longitude": "-105.513550"
+    },
+    {
+        "id": 8,
+        "name": "Breckenridge", 
+        "latitude": "38.482140", 
+        "longitude": "-106.048691"
+    },
+    {
+        "id": 9,
+        "name": "Centennial", 
+        "latitude": "39.580746", 
+        "longitude": "-104.877174"
+    },
+    {
+        "id": 10,
+        "name": "Fort Collins",
+        "latitude": "40.588970", 
+        "longitude": "-105.082458"
+    },
+    {
+        "id": 11,
+        "name": "Buena Vista", 
+        "latitude": "38.841770", 
+        "longitude": "-106.132561"
+    },
+    {
+        "id": 12,
+        "name": "Thornton", 
+        "latitude": "39.870350", 
+        "longitude": "-104.982460"
+    },
+    {
+        "id": 13,
+        "name": "Carbondale", 
+        "latitude": "39.396970", 
+        "longitude": "-107.217530"
+    },
+    {
+        "id": 14,
+        "name": "Westminster", 
+        "latitude": "39.863510", 
+        "longitude": "-105.041122"
+    },
+    {
+        "id": 15,
+        "name": "Ouray", 
+        "latitude": "38.022751", 
+        "longitude": "-107.671501"
+    },
+    {
+        "id": 16,
+        "name": "Winter Park", 
+        "latitude": "38.891060", 
+        "longitude": "-105.760719"
+    },
+    {
+        "id": 17,
+        "name": "Golden", 
+        "latitude": "39.749668", 
+        "longitude": "-105.216019"
+    },
+    {
+        "id": 18,
+        "name": "Boulder", 
+        "latitude": "40.016869", 
+        "longitude": "-105.279617"
+    },
+    {
+        "id": 19,
+        "name": "Englewood", 
+        "latitude": "39.549441", 
+        "longitude": "-104.988907"
+    },
+    {
+        "id": 20,
+        "name": "Longmont",
+        "latitude": "40.165730", 
+        "longitude": "-105.101189"
+    },
+    {
+        "id": 21,
+        "name": "Durango", 
+        "latitude": "37.275280", 
+        "longitude": "-107.880066"
+    },
+    {
+        "id": 22,
+        "name": "Estes Park", 
+        "latitude": "40.376129", 
+        "longitude": "-105.523651"
+    },
+    {
+        "id": 23,
+        "name": "Lafayette", 
+        "latitude": "39.994282", 
+        "longitude": "-105.090462"
+    },
+    {
+        "id": 24,
+        "name": "Palisade", 
+        "latitude": "39.106129", 
+        "longitude": "-108.350983"
+    },
+    {
+        "id": 25,
+        "name": "Hugo", 
+        "latitude": "39.134750", 
+        "longitude": "-103.471160"
+    },
+    {
+        "id": 26,
+        "name": "Santa Fe", 
+        "latitude": "35.686974", 
+        "longitude": "-105.937798"
+    },
+    {
+        "id": 27,
+        "name": "Lyons", 
+        "latitude": "40.224030", 
+        "longitude": "-105.269913"
+    },
+    {
+        "id": 28,
+        "name": "Steamboat Springs", 
+        "latitude": "40.484978", 
+        "longitude": "-106.831718"
+    },
+    {
+        "id": 29,
+        "name": "Dotsero", 
+        "latitude": "39.649500", 
+        "longitude": "-107.060630"
+    },
+    {
+        "id": 30,
+        "name": "Montrose", 
+        "latitude": "38.478031", 
+        "longitude": "-107.876808"
+    },
+    {
+        "id": 31,
+        "name": "Greeley", 
+        "latitude": "40.422550",
+        "longitude": "-104.694443"
+    },
+    {
+        "id": 32,
+        "name": "Arvada", 
+        "latitude": "39.801121", 
+        "longitude": "-105.081451"
+    },
+    {
+        "id": 33,
+        "name": "Windsor", 
+        "latitude": "40.479961", 
+        "longitude": "-104.907677"
+    },
+    {
+        "id": 34,
+        "name": "Salida", 
+        "latitude": "38.534718", 
+        "longitude": "-105.998901"
+    },
+    {
+        "id": 35,
+        "name": "Basalt", 
+        "latitude": "39.368698", 
+        "longitude": "-107.036057"
+    },
+    {
+        "id": 36,
+        "name": "Vail", 
+        "latitude": "39.640260", 
+        "longitude": "-106.370870"
+    }
+]
+
