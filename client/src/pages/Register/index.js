@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useForm } from "../../useForm";
+import { Slider, Slide, Caption } from "react-materialize";
 import API from "../../utils/API";
-
 
 const Register = () => {
     const [values, handleChange] = useForm({ name: "", email: "", password: "", password2: "" });
@@ -10,28 +10,28 @@ const Register = () => {
     const signup = e => {
         e.preventDefault();
         console.log("signing up")
-        const {name, email, password, password2 } = values;
+        const { name, email, password, password2 } = values;
         console.log(name)
         if (name && email && password && password2) {
             if (password === password2) {
                 console.log("going to api")
                 API.signup({
                     name: name,
-                    username: email, 
+                    username: email,
                     password: password
                 }).then(user => {
                     console.log(user)
                     setMessage("Successfully signed up.")
 
                     if (user.data) {
-                      console.log("log in successful");
-                      window.location.href = '/dashboard';
-                    console.log(user.data)
+                        console.log("log in successful");
+                        window.location.href = '/dashboard';
+                        console.log(user.data)
                     } else {
-                      console.log("something went wrong :(")
-                      console.log(user.data);
+                        console.log("something went wrong :(")
+                        console.log(user.data);
                     }
-                  });
+                });
             } else {
                 setMessage("Passwords must match.")
             }
@@ -55,8 +55,8 @@ const Register = () => {
                                     <div className="col s12">
                                         {message ? (
                                             <p>{message}</p>
-                                        ) : 
-                                        null
+                                        ) :
+                                            null
                                         }
                                     </div>
                                     <form className="container">
@@ -75,39 +75,39 @@ const Register = () => {
                                         </div>
                                         <div className="row">
                                             <div className="input-field col s12">
-                                                <input 
-                                                id="email" 
-                                                type="email" 
-                                                name="email"
-                                                className="validate"
-                                                value={values.email}
-                                                onChange={handleChange}
-                                                  />
+                                                <input
+                                                    id="email"
+                                                    type="email"
+                                                    name="email"
+                                                    className="validate"
+                                                    value={values.email}
+                                                    onChange={handleChange}
+                                                />
                                                 <label for="email">Email</label>
                                             </div>
                                         </div>
                                         <div className="row">
                                             <div className="input-field col s12">
-                                                <input 
-                                                id="password" 
-                                                type="password" 
-                                                name="password" 
-                                                value={values.password} 
-                                                onChange={handleChange}
-                                                className="validate" />
+                                                <input
+                                                    id="password"
+                                                    type="password"
+                                                    name="password"
+                                                    value={values.password}
+                                                    onChange={handleChange}
+                                                    className="validate" />
                                                 <label for="password">Password</label>
                                             </div>
                                         </div>
                                         <div className="row">
                                             <div className="input-field col s12">
-                                                <input 
-                                                id="password2" 
-                                                type="password" 
-                                                name="password2" 
-                                                className="validate"
-                                                value={values.password2}
-                                                onChange={handleChange}
-                                                 />
+                                                <input
+                                                    id="password2"
+                                                    type="password"
+                                                    name="password2"
+                                                    className="validate"
+                                                    value={values.password2}
+                                                    onChange={handleChange}
+                                                />
                                                 <label for="password2">Confirm</label>
                                             </div>
                                         </div>
@@ -127,31 +127,35 @@ const Register = () => {
 
                         <div className="card">
                             <div className="card-image">
-                                <div className="slider">
-                                    <ul className="slides">
-                                        <li>
-                                            <img src="/img/cocktails.jpeg" />
-                                            <div className="white-text caption left-align">
-                                                <h2>Explore.</h2>
-                                                <h4 className="white-text">See what Colorado drinks</h4>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <img src="/img/glass.jpeg" />
-                                            <div className="white-text caption center-align">
-                                                <h2>Stash.</h2>
-                                                <h4 className="white-text">Save a list of your favorites</h4>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <img src="/img/gin.jpeg" />
-                                            <div className="caption right-align">
-                                                <h2>Plan.</h2>
-                                                <h4 className="white-text">Get excited for future trips out</h4>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
+                                <Slider
+                                    fullscreen={false}
+                                    options={{
+                                        duration: 500,
+                                        height: 400,
+                                        indicators: true,
+                                        interval: 6000
+                                    }}
+                                >
+                                    <Slide image={<img alt="" src="/img/cocktails.jpeg" />}>
+                                        <Caption placement="center">
+                                            <h2>Explore.</h2>
+                                            <h4 className="white-text">See what Colorado drinks</h4>
+                                        </Caption>
+                                    </Slide>
+
+                                    <Slide image={<img alt="" src="/img/glass.jpeg" />}>
+                                        <Caption placement="right">
+                                            <h2>Stash.</h2>
+                                            <h4 className="white-text">Save a list of your favorites</h4>
+                                        </Caption>
+                                    </Slide>
+                                    <Slide image={<img alt="" src="/img/gin.jpeg" />}>
+                                        <Caption placement="center">
+                                            <h2>Plan.</h2>
+                                            <h4 className="white-text">Get excited for future trips out</h4>
+                                        </Caption>
+                                    </Slide>
+                                </Slider>
                             </div>
                         </div>
                     </div>
