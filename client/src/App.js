@@ -6,6 +6,8 @@ import Dashboard from "./pages/Dashboard";
 import UserProvider from "./contexts/UserProvider";
 import Login from "./pages/Login";
 import Register from "./pages/Register"
+import Chart from "./pages/Chart"
+import Map from "./pages/Map"
 import AgeVerify from "./components/AgeVerify"
 import ViewDistillery from "./pages/ViewDistillery";
 import ViewAlcohols from "./pages/ViewAlcohols";
