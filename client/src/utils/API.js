@@ -34,8 +34,8 @@ export default {
     return axios.get(`/api/alcohol/types/${type}`)
   },
 
-  getRating: function(alcoholId) {
-    return axios.get(`/api/alcohol/ratings/${alcoholId}`)
+  getAlcohol: function(alcoholId) {
+    return axios.get(`/api/alcohol/${alcoholId}`)
   },
 
   postRating: function(ratingInfo) {
@@ -51,11 +51,12 @@ export default {
   },
 
   findByLocation: function(location) {
-    return axios.get(`/api/distillery/${location}`)
+    return axios.get(`/api/distillery/location/${location}`)
   },
 
   getDistillery: function(distilleryId) {
-    return axios.get(`/api/distillery/${distilleryId}`)
+    
+    return(axios.get(`/api/distillery/id/${distilleryId}`))
   }
 
 };

@@ -20,7 +20,7 @@ router.get("/types/:type", (req, res) => {
     });
 });
 
-router.get("/ratings/:AlcoholId", (req, res) => {
+router.get("/:AlcoholId", (req, res) => {
   db.Alcohol.findOne({ _id: req.params.AlcoholId })
     .populate("ratings")
     .exec((err, data) => {
